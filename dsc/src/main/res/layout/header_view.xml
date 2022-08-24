@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSurface"
+    tools:layout_height="?actionBarSize">
+
+    <com.francisco.strider.dsc.component.icon.IconTextView
+        android:id="@+id/itv_icon_left"
+        style="@style/DscTheme.ToolbarIcon"
+        android:text="@string/icon_chevron_left_kit"
+        android:textColor="?colorOnSurface"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/fontawesomekit_regular"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/DscTheme.Font.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_xsm"
+        android:layout_marginEnd="@dimen/size_xsm"
+        android:gravity="center"
+        android:textColor="?colorOnSurface"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itv_icon_right"
+        app:layout_constraintStart_toEndOf="@id/itv_icon_left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title"
+        tools:visibility="visible" />
+
+    <com.francisco.strider.dsc.component.icon.IconTextView
+        android:id="@+id/itv_icon_right"
+        style="@style/DscTheme.ToolbarIcon"
+        android:layout_marginEnd="@dimen/size_xsm"
+        android:text="@string/icon_times_kit"
+        android:textColor="?colorOnSurface"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/fontawesomekit_regular"
+        tools:visibility="visible" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lpi_progress"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/line_lg"
+        android:indeterminate="false"
+        android:visibility="gone"
+        app:indicatorColor="@color/primary200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/support100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

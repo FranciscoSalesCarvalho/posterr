@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="DscTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary200</item>
+        <item name="colorPrimaryVariant">@color/primary300</item>
+        <item name="colorOnPrimary">@color/support100</item>
+
+        <item name="colorSecondary">@color/secondary200</item>
+        <item name="colorSecondaryVariant">@color/secondary300</item>
+        <item name="colorOnSecondary">@color/support100</item>
+
+        <item name="colorError">@color/critical200</item>
+        <item name="colorOnError">@color/support100</item>
+
+        <item name="colorSurface">@color/support100</item>
+        <item name="colorOnSurface">@color/support500</item>
+
+        <item name="colorAccent">?attr/colorPrimary</item>
+        <item name="colorControlHighlight">@color/primary100</item>
+
+        <item name="android:windowBackground">@color/support200</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+
+        <item name="android:textColor">@color/support500</item>
+        <item name="materialButtonStyle">@style/DscTheme.Button.Primary</item>
+        <item name="cardBackgroundColor">@color/support100</item>
+        <item name="materialCalendarTheme">@style/DscTheme.DatePicker</item>
+
+        <item name="buttonPrimaryStyle">@style/DscTheme.Button.Primary</item>
+        <item name="buttonPrimaryFlowStyle">@style/DscTheme.Button.Primary.Flow</item>
+        <item name="buttonSecondaryStyle">@style/DscTheme.Button.Secondary</item>
+        <item name="buttonSecondaryFlowStyle">@style/DscTheme.Button.Secondary.Flow</item>
+        <item name="buttonOutlinedStyle">@style/DscTheme.Button.Outlined</item>
+        <item name="buttonOutlinedFlowStyle">@style/DscTheme.Button.Outlined.Flow</item>
+        <item name="buttonOutlinedLightStyle">@style/DscTheme.Button.Outlined.Light</item>
+        <item name="buttonOutlinedLightFlowStyle">@style/DscTheme.Button.Outlined.Light.Flow</item>
+        <item name="buttonRectangleFlowStyle">@style/DscTheme.Button.Rectangle.Flow</item>
+
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+</resources>

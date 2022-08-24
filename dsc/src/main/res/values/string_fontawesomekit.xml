@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_agibank_kit">\ue0e9</string>
+    <string name="icon_agibank_blue_kit">\ue0e8</string>
+    <string name="icon_analytics_kit">\ue005</string>
+    <string name="icon_android_kit">\ue077</string>
+    <string name="icon_angle_down_kit">\ue006</string>
+    <string name="icon_angle_up_kit">\ue007</string>
+    <string name="icon_apple_kit">\ue078</string>
+    <string name="icon_atm_kit">\ue0a0</string>
+    <string name="icon_badge_percent_kit">\ue008</string>
+    <string name="icon_ban_kit">\ue0d3</string>
+    <string name="icon_barcode_kit">\ue009</string>
+    <string name="icon_bell_kit">\ue00b</string>
+    <string name="icon_bell_on_kit">\ue00a</string>
+    <string name="icon_bell_slash_1_kit">\ue052</string>
+    <string name="icon_birthday_block_kit">\ue0cf</string>
+    <string name="icon_bolt_kit">\ue0dc</string>
+    <string name="icon_building_kit">\ue00c</string>
+    <string name="icon_bullhorn_kit">\ue00d</string>
+    <string name="icon_calculator_kit">\ue00e</string>
+    <string name="icon_calendar_clock_kit">\ue053</string>
+    <string name="icon_calendar_creditcard_kit">\ue0cd</string>
+    <string name="icon_calendar_day_kit">\ue00f</string>
+    <string name="icon_calendar_money_kit">\ue010</string>
+    <string name="icon_calendar_plus_kit">\ue0aa</string>
+    <string name="icon_camera_kit">\ue093</string>
+    <string name="icon_cap_kit">\ue011</string>
+    <string name="icon_car_crash_kit">\ue0df</string>
+    <string name="icon_car_finance_kit">\ue012</string>
+    <string name="icon_car_garage_kit">\ue013</string>
+    <string name="icon_car_house_kit">\ue0d6</string>
+    <string name="icon_car_shield_kit">\ue0e6</string>
+    <string name="icon_car_tag_kit">\ue054</string>
+    <string name="icon_car_wrench_kit">\ue0dd</string>
+    <string name="icon_cars_kit">\ue0de</string>
+    <string name="icon_chart_dollar_kit">\ue014</string>
+    <string name="icon_chart_file_invoice_kit">\ue0ab</string>
+    <string name="icon_chart_line_up_kit">\ue000</string>
+    <string name="icon_chart_network_kit">\ue015</string>
+    <string name="icon_chart_up_kit">\ue016</string>
+    <string name="icon_chat_kit">\ue017</string>
+    <string name="icon_check_kit">\ue0e2</string>
+    <string name="icon_check_box_fill_kit">\ue085</string>
+    <string name="icon_check_box_outline_kit">\ue086</string>
+    <string name="icon_check_circle_fill_kit">\ue05c</string>
+    <string name="icon_check_circle_outline_kit">\ue05d</string>
+    <string name="icon_chevron_left_kit">\ue018</string>
+    <string name="icon_chevron_right_kit">\ue019</string>
+    <string name="icon_circle_plus_fill_kit">\ue09c</string>
+    <string name="icon_circle_plus_outline_kit">\ue09d</string>
+    <string name="icon_clinic_medical_kit">\ue0ba</string>
+    <string name="icon_clipboard_list_kit">\ue01c</string>
+    <string name="icon_clipboard_list_check_kit">\ue01b</string>
+    <string name="icon_clock_kit">\ue094</string>
+    <string name="icon_clock_24_h_kit">\ue0db</string>
+    <string name="icon_cog_kit">\ue01d</string>
+    <string name="icon_comment_alt_smile_kit">\ue099</string>
+    <string name="icon_copy_kit">\ue01e</string>
+    <string name="icon_credit_alert_kit">\ue0eb</string>
+    <string name="icon_credit_card_kit">\ue001</string>
+    <string name="icon_credit_lock_kit">\ue002</string>
+    <string name="icon_credit_pay_kit">\ue055</string>
+    <string name="icon_credit_plus_kit">\ue0ac</string>
+    <string name="icon_credit_sack_kit">\ue0ca</string>
+    <string name="icon_dash_kit">\ue0e0</string>
+    <string name="icon_desktop_kit">\ue01f</string>
+    <string name="icon_dog_kit">\ue09e</string>
+    <string name="icon_donate_kit">\ue020</string>
+    <string name="icon_dot_circle_outline_kit">\ue091</string>
+    <string name="icon_dot_circle_solid_kit">\ue092</string>
+    <string name="icon_exchange_circle_fill_kit">\ue088</string>
+    <string name="icon_exchange_circle_outline_kit">\ue089</string>
+    <string name="icon_exclamation_circle_fill_kit">\ue08a</string>
+    <string name="icon_exclamation_circle_outline_kit">\ue08b</string>
+    <string name="icon_exclamation_triangle_outline_kit">\ue07e</string>
+    <string name="icon_exclamation_triangle_solid_kit">\ue07f</string>
+    <string name="icon_explore_investment_kit">\ue0d9</string>
+    <string name="icon_external_link_kit">\ue0d8</string>
+    <string name="icon_extract_kit">\ue021</string>
+    <string name="icon_eye_kit">\ue023</string>
+    <string name="icon_eye_slash_kit">\ue022</string>
+    <string name="icon_eyes_focus_kit">\ue0a1</string>
+    <string name="icon_face_id_kit">\ue0a4</string>
+    <string name="icon_facebook_kit">\ue079</string>
+    <string name="icon_file_contract_kit">\ue024</string>
+    <string name="icon_file_exclamation_kit">\ue0c6</string>
+    <string name="icon_file_invoice_kit">\ue026</string>
+    <string name="icon_file_invoice_dollar_kit">\ue025</string>
+    <string name="icon_file_signature_kit">\ue0ad</string>
+    <string name="icon_fingerprint_kit">\ue0a2</string>
+    <string name="icon_general_kit">\ue0d4</string>
+    <string name="icon_gift_kit">\ue0e3</string>
+    <string name="icon_gift_card_kit">\ue0ae</string>
+    <string name="icon_globe_americas_kit">\ue095</string>
+    <string name="icon_google_kit">\ue07a</string>
+    <string name="icon_grin_beam_fill_kit">\ue05e</string>
+    <string name="icon_grin_beam_outline_kit">\ue05f</string>
+    <string name="icon_grin_beam_sweat_kit">\ue09a</string>
+    <string name="icon_hand_holding_file_invoice_kit">\ue0af</string>
+    <string name="icon_hand_holding_usd_kit">\ue027</string>
+    <string name="icon_handshake_kit">\ue0da</string>
+    <string name="icon_heartbeat_kit">\ue028</string>
+    <string name="icon_hifive_kit">\ue076</string>
+    <string name="icon_history_kit">\ue09f</string>
+    <string name="icon_history_1_kit">\ue0b0</string>
+    <string name="icon_home_kit">\ue02a</string>
+    <string name="icon_home_fill_kit">\ue06c</string>
+    <string name="icon_home_heart_kit">\ue029</string>
+    <string name="icon_house_finance_kit">\ue02b</string>
+    <string name="icon_house_shield_kit">\ue0e5</string>
+    <string name="icon_id_card_kit">\ue02c</string>
+    <string name="icon_info_circle_outline_kit">\ue080</string>
+    <string name="icon_info_circle_solid_kit">\ue081</string>
+    <string name="icon_instagram_kit">\ue07b</string>
+    <string name="icon_key_kit">\ue02d</string>
+    <string name="icon_laptop_kit">\ue02e</string>
+    <string name="icon_light_ceiling_kit">\ue02f</string>
+    <string name="icon_lightbulb_on_kit">\ue0a9</string>
+    <string name="icon_link_kit">\ue030</string>
+    <string name="icon_linkedin_kit">\ue07c</string>
+    <string name="icon_list_alt_kit">\ue0b1</string>
+    <string name="icon_lock_kit">\ue069</string>
+    <string name="icon_lock_open_kit">\ue068</string>
+    <string name="icon_long_arrow_left_kit">\ue031</string>
+    <string name="icon_long_arrow_right_kit">\ue032</string>
+    <string name="icon_loterica_kit">\ue033</string>
+    <string name="icon_map_location_dot_kit">\ue0e1</string>
+    <string name="icon_map_marker_alt_kit">\ue06a</string>
+    <string name="icon_mastercard_kit">\ue071</string>
+    <string name="icon_meh_kit">\ue072</string>
+    <string name="icon_minus_circle_kit">\ue034</string>
+    <string name="icon_minus_circle_fill_kit">\ue0c7</string>
+    <string name="icon_mobile_android_fill_kit">\ue060</string>
+    <string name="icon_mobile_android_outline_kit">\ue061</string>
+    <string name="icon_mobile_dollar_kit">\ue057</string>
+    <string name="icon_mobile_law_kit">\ue096</string>
+    <string name="icon_mobile_qrcode_kit">\ue0d2</string>
+    <string name="icon_mobile_wifi_kit">\ue056</string>
+    <string name="icon_money_kit">\ue036</string>
+    <string name="icon_money_bill_kit">\ue0e4</string>
+    <string name="icon_money_check_edit_alt_kit">\ue0b7</string>
+    <string name="icon_money_fill_kit">\ue06d</string>
+    <string name="icon_money_in_kit">\ue0c4</string>
+    <string name="icon_money_out_kit">\ue0c5</string>
+    <string name="icon_money_pay_kit">\ue035</string>
+    <string name="icon_openbanking_kit">\ue0a3</string>
+    <string name="icon_openbanking_icon_kit">\ue0d1</string>
+    <string name="icon_password_kit">\ue058</string>
+    <string name="icon_password_block_kit">\ue0ce</string>
+    <string name="icon_payment_error_kit">\ue08c</string>
+    <string name="icon_pencil_kit">\ue037</string>
+    <string name="icon_phone_volume_kit">\ue062</string>
+    <string name="icon_piggy_bank_kit">\ue097</string>
+    <string name="icon_pix_kit">\ue003</string>
+    <string name="icon_pix_fill_kit">\ue0be</string>
+    <string name="icon_plane_kit">\ue038</string>
+    <string name="icon_popcorn_kit">\ue0bb</string>
+    <string name="icon_portrait_kit">\ue039</string>
+    <string name="icon_qrcode_kit">\ue03a</string>
+    <string name="icon_qrcode_pay_kit">\ue06b</string>
+    <string name="icon_question_circle_fill_kit">\ue0bf</string>
+    <string name="icon_question_circle_outline_kit">\ue0c0</string>
+    <string name="icon_receipt_kit">\ue098</string>
+    <string name="icon_recycle_kit">\ue03b</string>
+    <string name="icon_repeat_alt_kit">\ue03c</string>
+    <string name="icon_repeat_money_kit">\ue059</string>
+    <string name="icon_sack_dollar_kit">\ue03f</string>
+    <string name="icon_sack_dollar_hands_kit">\ue03d</string>
+    <string name="icon_sack_dollar_lock_kit">\ue03e</string>
+    <string name="icon_sack_dollar_receive_kit">\ue0a5</string>
+    <string name="icon_sad_kit">\ue087</string>
+    <string name="icon_sad_tear_fill_kit">\ue063</string>
+    <string name="icon_sad_tear_outline_kit">\ue064</string>
+    <string name="icon_search_kit">\ue090</string>
+    <string name="icon_search_dollar_kit">\ue0b2</string>
+    <string name="icon_selfie_kit">\ue0ed</string>
+    <string name="icon_selfie_document_kit">\ue0ec</string>
+    <string name="icon_sensor_alert_kit">\ue0d7</string>
+    <string name="icon_share_kit">\ue040</string>
+    <string name="icon_share_square_kit">\ue065</string>
+    <string name="icon_shield_check_kit">\ue0b8</string>
+    <string name="icon_shopping_bag_kit">\ue05a</string>
+    <string name="icon_shopping_bag_fill_kit">\ue070</string>
+    <string name="icon_shopping_cart_kit">\ue0bc</string>
+    <string name="icon_signal_stream_kit">\ue073</string>
+    <string name="icon_sliders_kit">\ue08d</string>
+    <string name="icon_snap_finger_kit">\ue0e7</string>
+    <string name="icon_spinner_kit">\ue08e</string>
+    <string name="icon_spotify_kit">\ue0a6</string>
+    <string name="icon_star_circle_kit">\ue08f</string>
+    <string name="icon_star_fill_kit">\ue0c8</string>
+    <string name="icon_star_outline_kit">\ue0c9</string>
+    <string name="icon_store_google_kit">\ue041</string>
+    <string name="icon_surprise_kit">\ue074</string>
+    <string name="icon_sync_kit">\ue042</string>
+    <string name="icon_tablet_kit">\ue044</string>
+    <string name="icon_tasks_kit">\ue0b3</string>
+    <string name="icon_times_kit">\ue045</string>
+    <string name="icon_times_circle_kit">\ue066</string>
+    <string name="icon_times_circle_solid_kit">\ue082</string>
+    <string name="icon_times_square_kit">\ue0b6</string>
+    <string name="icon_tired_kit">\ue075</string>
+    <string name="icon_transfer_kit">\ue0cc</string>
+    <string name="icon_trash_alt_kit">\ue046</string>
+    <string name="icon_tv_kit">\ue047</string>
+    <string name="icon_twitter_kit">\ue0a7</string>
+    <string name="icon_uber_kit">\ue048</string>
+    <string name="icon_upgrade_seguro_kit">\ue0b4</string>
+    <string name="icon_usd_circle_kit">\ue049</string>
+    <string name="icon_user_kit">\ue050</string>
+    <string name="icon_user_chart_kit">\ue04a</string>
+    <string name="icon_user_fill_kit">\ue06e</string>
+    <string name="icon_user_friend_donate_kit">\ue04b</string>
+    <string name="icon_user_friend_pay_kit">\ue04c</string>
+    <string name="icon_user_group_donate_kit">\ue04d</string>
+    <string name="icon_user_group_pay_kit">\ue04e</string>
+    <string name="icon_user_house_car_1_kit">\ue05b</string>
+    <string name="icon_user_minus_kit">\ue04f</string>
+    <string name="icon_user_money_kit">\ue0d5</string>
+    <string name="icon_user_plus_kit">\ue004</string>
+    <string name="icon_user_shield_kit">\ue0b5</string>
+    <string name="icon_users_kit">\ue0b9</string>
+    <string name="icon_utensils_kit">\ue0bd</string>
+    <string name="icon_wallet_kit">\ue051</string>
+    <string name="icon_wallet_fill_kit">\ue06f</string>
+    <string name="icon_whatsapp_kit">\ue07d</string>
+    <string name="icon_wifi_kit">\ue0ea</string>
+    <string name="icon_youtube_kit">\ue0a8</string>
+
+    <string-array name="icons_kit">
+        <item>icon_agibank_kit|\ue0e9</item>
+        <item>icon_agibank_blue_kit|\ue0e8</item>
+        <item>icon_analytics_kit|\ue005</item>
+        <item>icon_android_kit|\ue077</item>
+        <item>icon_angle_down_kit|\ue006</item>
+        <item>icon_angle_up_kit|\ue007</item>
+        <item>icon_apple_kit|\ue078</item>
+        <item>icon_atm_kit|\ue0a0</item>
+        <item>icon_badge_percent_kit|\ue008</item>
+        <item>icon_ban_kit|\ue0d3</item>
+        <item>icon_barcode_kit|\ue009</item>
+        <item>icon_bell_kit|\ue00b</item>
+        <item>icon_bell_on_kit|\ue00a</item>
+        <item>icon_bell_slash_1_kit|\ue052</item>
+        <item>icon_birthday_block_kit|\ue0cf</item>
+        <item>icon_bolt_kit|\ue0dc</item>
+        <item>icon_building_kit|\ue00c</item>
+        <item>icon_bullhorn_kit|\ue00d</item>
+        <item>icon_calculator_kit|\ue00e</item>
+        <item>icon_calendar_clock_kit|\ue053</item>
+        <item>icon_calendar_creditcard_kit|\ue0cd</item>
+        <item>icon_calendar_day_kit|\ue00f</item>
+        <item>icon_calendar_money_kit|\ue010</item>
+        <item>icon_calendar_plus_kit|\ue0aa</item>
+        <item>icon_camera_kit|\ue093</item>
+        <item>icon_cap_kit|\ue011</item>
+        <item>icon_car_crash_kit|\ue0df</item>
+        <item>icon_car_finance_kit|\ue012</item>
+        <item>icon_car_garage_kit|\ue013</item>
+        <item>icon_car_house_kit|\ue0d6</item>
+        <item>icon_car_shield_kit|\ue0e6</item>
+        <item>icon_car_tag_kit|\ue054</item>
+        <item>icon_car_wrench_kit|\ue0dd</item>
+        <item>icon_cars_kit|\ue0de</item>
+        <item>icon_chart_dollar_kit|\ue014</item>
+        <item>icon_chart_file_invoice_kit|\ue0ab</item>
+        <item>icon_chart_line_up_kit|\ue000</item>
+        <item>icon_chart_network_kit|\ue015</item>
+        <item>icon_chart_up_kit|\ue016</item>
+        <item>icon_chat_kit|\ue017</item>
+        <item>icon_check_kit|\ue0e2</item>
+        <item>icon_check_box_fill_kit|\ue085</item>
+        <item>icon_check_box_outline_kit|\ue086</item>
+        <item>icon_check_circle_fill_kit|\ue05c</item>
+        <item>icon_check_circle_outline_kit|\ue05d</item>
+        <item>icon_chevron_left_kit|\ue018</item>
+        <item>icon_chevron_right_kit|\ue019</item>
+        <item>icon_circle_plus_fill_kit|\ue09c</item>
+        <item>icon_circle_plus_outline_kit|\ue09d</item>
+        <item>icon_clinic_medical_kit|\ue0ba</item>
+        <item>icon_clipboard_list_kit|\ue01c</item>
+        <item>icon_clipboard_list_check_kit|\ue01b</item>
+        <item>icon_clock_kit|\ue094</item>
+        <item>icon_clock_24_h_kit|\ue0db</item>
+        <item>icon_cog_kit|\ue01d</item>
+        <item>icon_comment_alt_smile_kit|\ue099</item>
+        <item>icon_copy_kit|\ue01e</item>
+        <item>icon_credit_alert_kit|\ue0eb</item>
+        <item>icon_credit_card_kit|\ue001</item>
+        <item>icon_credit_lock_kit|\ue002</item>
+        <item>icon_credit_pay_kit|\ue055</item>
+        <item>icon_credit_plus_kit|\ue0ac</item>
+        <item>icon_credit_sack_kit|\ue0ca</item>
+        <item>icon_dash_kit|\ue0e0</item>
+        <item>icon_desktop_kit|\ue01f</item>
+        <item>icon_dog_kit|\ue09e</item>
+        <item>icon_donate_kit|\ue020</item>
+        <item>icon_dot_circle_outline_kit|\ue091</item>
+        <item>icon_dot_circle_solid_kit|\ue092</item>
+        <item>icon_exchange_circle_fill_kit|\ue088</item>
+        <item>icon_exchange_circle_outline_kit|\ue089</item>
+        <item>icon_exclamation_circle_fill_kit|\ue08a</item>
+        <item>icon_exclamation_circle_outline_kit|\ue08b</item>
+        <item>icon_exclamation_triangle_outline_kit|\ue07e</item>
+        <item>icon_exclamation_triangle_solid_kit|\ue07f</item>
+        <item>icon_explore_investment_kit|\ue0d9</item>
+        <item>icon_external_link_kit|\ue0d8</item>
+        <item>icon_extract_kit|\ue021</item>
+        <item>icon_eye_kit|\ue023</item>
+        <item>icon_eye_slash_kit|\ue022</item>
+        <item>icon_eyes_focus_kit|\ue0a1</item>
+        <item>icon_face_id_kit|\ue0a4</item>
+        <item>icon_facebook_kit|\ue079</item>
+        <item>icon_file_contract_kit|\ue024</item>
+        <item>icon_file_exclamation_kit|\ue0c6</item>
+        <item>icon_file_invoice_kit|\ue026</item>
+        <item>icon_file_invoice_dollar_kit|\ue025</item>
+        <item>icon_file_signature_kit|\ue0ad</item>
+        <item>icon_fingerprint_kit|\ue0a2</item>
+        <item>icon_general_kit|\ue0d4</item>
+        <item>icon_gift_kit|\ue0e3</item>
+        <item>icon_gift_card_kit|\ue0ae</item>
+        <item>icon_globe_americas_kit|\ue095</item>
+        <item>icon_google_kit|\ue07a</item>
+        <item>icon_grin_beam_fill_kit|\ue05e</item>
+        <item>icon_grin_beam_outline_kit|\ue05f</item>
+        <item>icon_grin_beam_sweat_kit|\ue09a</item>
+        <item>icon_hand_holding_file_invoice_kit|\ue0af</item>
+        <item>icon_hand_holding_usd_kit|\ue027</item>
+        <item>icon_handshake_kit|\ue0da</item>
+        <item>icon_heartbeat_kit|\ue028</item>
+        <item>icon_hifive_kit|\ue076</item>
+        <item>icon_history_kit|\ue09f</item>
+        <item>icon_history_1_kit|\ue0b0</item>
+        <item>icon_home_kit|\ue02a</item>
+        <item>icon_home_fill_kit|\ue06c</item>
+        <item>icon_home_heart_kit|\ue029</item>
+        <item>icon_house_finance_kit|\ue02b</item>
+        <item>icon_house_shield_kit|\ue0e5</item>
+        <item>icon_id_card_kit|\ue02c</item>
+        <item>icon_info_circle_outline_kit|\ue080</item>
+        <item>icon_info_circle_solid_kit|\ue081</item>
+        <item>icon_instagram_kit|\ue07b</item>
+        <item>icon_key_kit|\ue02d</item>
+        <item>icon_laptop_kit|\ue02e</item>
+        <item>icon_light_ceiling_kit|\ue02f</item>
+        <item>icon_lightbulb_on_kit|\ue0a9</item>
+        <item>icon_link_kit|\ue030</item>
+        <item>icon_linkedin_kit|\ue07c</item>
+        <item>icon_list_alt_kit|\ue0b1</item>
+        <item>icon_lock_kit|\ue069</item>
+        <item>icon_lock_open_kit|\ue068</item>
+        <item>icon_long_arrow_left_kit|\ue031</item>
+        <item>icon_long_arrow_right_kit|\ue032</item>
+        <item>icon_loterica_kit|\ue033</item>
+        <item>icon_map_location_dot_kit|\ue0e1</item>
+        <item>icon_map_marker_alt_kit|\ue06a</item>
+        <item>icon_mastercard_kit|\ue071</item>
+        <item>icon_meh_kit|\ue072</item>
+        <item>icon_minus_circle_kit|\ue034</item>
+        <item>icon_minus_circle_fill_kit|\ue0c7</item>
+        <item>icon_mobile_android_fill_kit|\ue060</item>
+        <item>icon_mobile_android_outline_kit|\ue061</item>
+        <item>icon_mobile_dollar_kit|\ue057</item>
+        <item>icon_mobile_law_kit|\ue096</item>
+        <item>icon_mobile_qrcode_kit|\ue0d2</item>
+        <item>icon_mobile_wifi_kit|\ue056</item>
+        <item>icon_money_kit|\ue036</item>
+        <item>icon_money_bill_kit|\ue0e4</item>
+        <item>icon_money_check_edit_alt_kit|\ue0b7</item>
+        <item>icon_money_fill_kit|\ue06d</item>
+        <item>icon_money_in_kit|\ue0c4</item>
+        <item>icon_money_out_kit|\ue0c5</item>
+        <item>icon_money_pay_kit|\ue035</item>
+        <item>icon_openbanking_kit|\ue0a3</item>
+        <item>icon_openbanking_icon_kit|\ue0d1</item>
+        <item>icon_password_kit|\ue058</item>
+        <item>icon_password_block_kit|\ue0ce</item>
+        <item>icon_payment_error_kit|\ue08c</item>
+        <item>icon_pencil_kit|\ue037</item>
+        <item>icon_phone_volume_kit|\ue062</item>
+        <item>icon_piggy_bank_kit|\ue097</item>
+        <item>icon_pix_kit|\ue003</item>
+        <item>icon_pix_fill_kit|\ue0be</item>
+        <item>icon_plane_kit|\ue038</item>
+        <item>icon_popcorn_kit|\ue0bb</item>
+        <item>icon_portrait_kit|\ue039</item>
+        <item>icon_qrcode_kit|\ue03a</item>
+        <item>icon_qrcode_pay_kit|\ue06b</item>
+        <item>icon_question_circle_fill_kit|\ue0bf</item>
+        <item>icon_question_circle_outline_kit|\ue0c0</item>
+        <item>icon_receipt_kit|\ue098</item>
+        <item>icon_recycle_kit|\ue03b</item>
+        <item>icon_repeat_alt_kit|\ue03c</item>
+        <item>icon_repeat_money_kit|\ue059</item>
+        <item>icon_sack_dollar_kit|\ue03f</item>
+        <item>icon_sack_dollar_hands_kit|\ue03d</item>
+        <item>icon_sack_dollar_lock_kit|\ue03e</item>
+        <item>icon_sack_dollar_receive_kit|\ue0a5</item>
+        <item>icon_sad_kit|\ue087</item>
+        <item>icon_sad_tear_fill_kit|\ue063</item>
+        <item>icon_sad_tear_outline_kit|\ue064</item>
+        <item>icon_search_kit|\ue090</item>
+        <item>icon_search_dollar_kit|\ue0b2</item>
+        <item>icon_selfie_kit|\ue0ed</item>
+        <item>icon_selfie_document_kit|\ue0ec</item>
+        <item>icon_sensor_alert_kit|\ue0d7</item>
+        <item>icon_share_kit|\ue040</item>
+        <item>icon_share_square_kit|\ue065</item>
+        <item>icon_shield_check_kit|\ue0b8</item>
+        <item>icon_shopping_bag_kit|\ue05a</item>
+        <item>icon_shopping_bag_fill_kit|\ue070</item>
+        <item>icon_shopping_cart_kit|\ue0bc</item>
+        <item>icon_signal_stream_kit|\ue073</item>
+        <item>icon_sliders_kit|\ue08d</item>
+        <item>icon_snap_finger_kit|\ue0e7</item>
+        <item>icon_spinner_kit|\ue08e</item>
+        <item>icon_spotify_kit|\ue0a6</item>
+        <item>icon_star_circle_kit|\ue08f</item>
+        <item>icon_star_fill_kit|\ue0c8</item>
+        <item>icon_star_outline_kit|\ue0c9</item>
+        <item>icon_store_google_kit|\ue041</item>
+        <item>icon_surprise_kit|\ue074</item>
+        <item>icon_sync_kit|\ue042</item>
+        <item>icon_tablet_kit|\ue044</item>
+        <item>icon_tasks_kit|\ue0b3</item>
+        <item>icon_times_kit|\ue045</item>
+        <item>icon_times_circle_kit|\ue066</item>
+        <item>icon_times_circle_solid_kit|\ue082</item>
+        <item>icon_times_square_kit|\ue0b6</item>
+        <item>icon_tired_kit|\ue075</item>
+        <item>icon_transfer_kit|\ue0cc</item>
+        <item>icon_trash_alt_kit|\ue046</item>
+        <item>icon_tv_kit|\ue047</item>
+        <item>icon_twitter_kit|\ue0a7</item>
+        <item>icon_uber_kit|\ue048</item>
+        <item>icon_upgrade_seguro_kit|\ue0b4</item>
+        <item>icon_usd_circle_kit|\ue049</item>
+        <item>icon_user_kit|\ue050</item>
+        <item>icon_user_chart_kit|\ue04a</item>
+        <item>icon_user_fill_kit|\ue06e</item>
+        <item>icon_user_friend_donate_kit|\ue04b</item>
+        <item>icon_user_friend_pay_kit|\ue04c</item>
+        <item>icon_user_group_donate_kit|\ue04d</item>
+        <item>icon_user_group_pay_kit|\ue04e</item>
+        <item>icon_user_house_car_1_kit|\ue05b</item>
+        <item>icon_user_minus_kit|\ue04f</item>
+        <item>icon_user_money_kit|\ue0d5</item>
+        <item>icon_user_plus_kit|\ue004</item>
+        <item>icon_user_shield_kit|\ue0b5</item>
+        <item>icon_users_kit|\ue0b9</item>
+        <item>icon_utensils_kit|\ue0bd</item>
+        <item>icon_wallet_kit|\ue051</item>
+        <item>icon_wallet_fill_kit|\ue06f</item>
+        <item>icon_whatsapp_kit|\ue07d</item>
+        <item>icon_wifi_kit|\ue0ea</item>
+        <item>icon_youtube_kit|\ue0a8</item>
+    </string-array>
+</resources>

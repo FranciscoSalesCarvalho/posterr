@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DscTheme.Dialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:theme">@style/DscTheme</item>
+    </style>
+
+    <style name="DscTheme.Dialog.FullScreen" parent="DscTheme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">@dimen/size_0</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="DscTheme.Dialog.FullScreen.Error" parent="DscTheme.Dialog.FullScreen">
+        <item name="android:windowBackground">@color/primary400</item>
+    </style>
+
+
+</resources>

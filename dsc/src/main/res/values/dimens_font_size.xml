@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="font_size_2xsm">10sp</dimen>
+    <dimen name="font_size_xsm">12sp</dimen>
+    <dimen name="font_size_sm">14sp</dimen>
+    <dimen name="font_size_md">16sp</dimen>
+    <dimen name="font_size_lg">20sp</dimen>
+    <dimen name="font_size_xlg">24sp</dimen>
+    <dimen name="font_size_2xlg">28sp</dimen>
+    <dimen name="font_size_3xlg">32sp</dimen>
+
+    <dimen name="line_height_xsm">16sp</dimen>
+    <dimen name="line_height_sm">20sp</dimen>
+    <dimen name="line_height_md">24sp</dimen>
+    <dimen name="line_height_lg">30sp</dimen>
+    <dimen name="line_height_xlg">36sp</dimen>
+    <dimen name="line_height_2xlg">40sp</dimen>
+
+</resources>

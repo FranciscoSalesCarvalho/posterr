@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DscTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="DscTheme.ToolbarIcon" parent="DscTheme.IconButton">
+        <item name="android:layout_marginStart">@dimen/size_xsm</item>
+    </style>
+</resources>

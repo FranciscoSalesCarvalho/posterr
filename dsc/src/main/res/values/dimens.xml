@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_0">0dp</dimen>
+
+    <dimen name="size_2xsm">4dp</dimen>
+    <dimen name="size_xsm">8dp</dimen>
+    <dimen name="size_sm">16dp</dimen>
+    <dimen name="size_md">24dp</dimen>
+    <dimen name="size_lg">32dp</dimen>
+    <dimen name="size_xlg">40dp</dimen>
+    <dimen name="size_2xlg">48dp</dimen>
+    <dimen name="size_3xlg">56dp</dimen>
+    <dimen name="size_4xlg">64dp</dimen>
+    <dimen name="size_5xlg">80dp</dimen>
+    <dimen name="size_6xlg">88dp</dimen>
+    <dimen name="size_7xlg">96dp</dimen>
+    <dimen name="size_8xlg">104dp</dimen>
+    <dimen name="size_9xlg">112dp</dimen>
+    <dimen name="size_10xlg">120dp</dimen>
+    <dimen name="size_11xlg">128dp</dimen>
+    <dimen name="size_12xlg">136dp</dimen>
+    <dimen name="size_13xlg">144dp</dimen>
+    <dimen name="size_14xlg">150dp</dimen>
+    <dimen name="size_15xlg">158dp</dimen>
+    <dimen name="size_16xlg">166dp</dimen>
+
+    <dimen name="radius_sm">4dp</dimen>
+    <dimen name="radius_md">8dp</dimen>
+    <dimen name="radius_lg">12dp</dimen>
+    <dimen name="radius_xlg">18dp</dimen>
+    <dimen name="radius_xxlg">40dp</dimen>
+
+    <dimen name="elevation_2xsm">1dp</dimen>
+    <dimen name="elevation_xsm">2dp</dimen>
+    <dimen name="elevation_sm">4dp</dimen>
+    <dimen name="elevation_md">8dp</dimen>
+    <dimen name="elevation_lg">16dp</dimen>
+
+    <dimen name="line_sm">0.5dp</dimen>
+    <dimen name="line_md">1dp</dimen>
+    <dimen name="line_lg">2dp</dimen>
+
+    <dimen name="progress_sm">20dp</dimen>
+    <dimen name="progress_md">40dp</dimen>
+    <dimen name="progress_lg">80dp</dimen>
+    <dimen name="progress_xlg">120dp</dimen>
+    <dimen name="progress_2xlg">200dp</dimen>
+
+</resources>

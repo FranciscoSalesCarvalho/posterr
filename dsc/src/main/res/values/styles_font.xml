@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="DscTheme.Font" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/avertastd_regular</item>
+        <item name="android:textColor">@color/support500</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="DscTheme.Font.Body1" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_md</item>
+        <item name="android:textSize">@dimen/font_size_md</item>
+    </style>
+
+    <style name="DscTheme.Font.Body1.SemiBold" parent="DscTheme.Font.Body1">
+        <item name="android:fontFamily">@font/avertastd_semibold</item>
+    </style>
+
+    <style name="DscTheme.Font.Body1.Bold" parent="DscTheme.Font.Body1">
+        <item name="android:fontFamily">@font/avertastd_bold</item>
+    </style>
+
+    <style name="DscTheme.Font.Body2" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_sm</item>
+        <item name="android:textSize">@dimen/font_size_sm</item>
+    </style>
+
+    <style name="DscTheme.Font.Body2.SemiBold" parent="DscTheme.Font.Body2">
+        <item name="android:fontFamily">@font/avertastd_semibold</item>
+    </style>
+
+    <style name="DscTheme.Font.Body2.Bold" parent="DscTheme.Font.Body2">
+        <item name="android:fontFamily">@font/avertastd_bold</item>
+    </style>
+
+    <style name="DscTheme.Font.Caption" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_xsm</item>
+        <item name="android:textSize">@dimen/font_size_xsm</item>
+    </style>
+
+    <style name="DscTheme.Font.Caption.SemiBold" parent="DscTheme.Font.Caption">
+        <item name="android:fontFamily">@font/avertastd_semibold</item>
+    </style>
+
+    <style name="DscTheme.Font.Caption.Bold" parent="DscTheme.Font.Caption">
+        <item name="android:fontFamily">@font/avertastd_bold</item>
+    </style>
+
+    <style name="DscTheme.Font.Overline" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_xsm</item>
+        <item name="android:textSize">@dimen/font_size_2xsm</item>
+    </style>
+
+    <style name="DscTheme.Font.H4" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_md</item>
+        <item name="android:textSize">@dimen/font_size_lg</item>
+        <item name="android:textColor">@color/support500</item>
+        <item name="android:fontFamily">@font/avertastd_regular</item>
+    </style>
+
+    <style name="DscTheme.Font.H4.SemiBold" parent="DscTheme.Font.H4">
+        <item name="android:fontFamily">@font/avertastd_semibold</item>
+    </style>
+
+    <style name="DscTheme.Font.H3" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_lg</item>
+        <item name="android:textSize">@dimen/font_size_xlg</item>
+        <item name="android:textColor">@color/support500</item>
+        <item name="android:fontFamily">@font/avertastd_bold</item>
+    </style>
+
+    <style name="DscTheme.Font.H2" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_xlg</item>
+        <item name="android:textSize">@dimen/font_size_2xlg</item>
+        <item name="android:textColor">@color/support500</item>
+        <item name="android:fontFamily">@font/avertastd_semibold</item>
+    </style>
+
+    <style name="DscTheme.Font.H1" parent="DscTheme.Font">
+        <item name="android:lineHeight" tools:targetApi="p">@dimen/line_height_2xlg</item>
+        <item name="android:textSize">@dimen/font_size_3xlg</item>
+        <item name="android:textColor">@color/support500</item>
+        <item name="android:fontFamily">@font/avertastd_bold</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary400">#262857</color>
+    <color name="primary300">#0040C9</color>
+    <color name="primary200">#266BFF</color>
+    <color name="primary100">#A1C0FF</color>
+    <color name="primary50">#ECF1FF</color>
+
+    <color name="secondary300">#13882C</color>
+    <color name="secondary200">#398641</color>
+    <color name="secondary100">#EAFCEE</color>
+
+    <color name="support500">#2F3039</color>
+    <color name="support400">#616276</color>
+    <color name="support300">#E0E1E6</color>
+    <color name="support200">#F1F2F5</color>
+    <color name="support150">#F6F6F6</color>
+    <color name="support100">#FFFFFF</color>
+
+    <color name="success300">#166127</color>
+    <color name="success200">#398641</color>
+    <color name="success100">#E4FEE7</color>
+
+    <color name="alert300">#764F09</color>
+    <color name="alert200">#FFA912</color>
+    <color name="alert100">#FFEFB9</color>
+
+    <color name="critical300">#A90015</color>
+    <color name="critical200">#DB001B</color>
+    <color name="critical100">#FFEBE6</color>
+</resources>

@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+apply from: "../dependencies.gradle"
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.francisco.strider"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        generateStubs = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.compose
+        kotlinCompilerVersion Versions.kotlinStdLib
+    }
+}
+
+dependencies {
+
+    implementation project(Modules.commons)
+    implementation project(Modules.dsc)
+
+    // Dagger2
+    api "com.google.dagger:dagger:${Versions.dagger}"
+    api "com.google.dagger:dagger-android:${Versions.dagger}"
+    api "com.google.dagger:dagger-android-support:${Versions.dagger}"
+
+    annotationProcessor "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    kapt "com.google.dagger:dagger-compiler:${Versions.dagger}"
+
+    annotationProcessor "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    kapt "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+
+    implementation "androidx.room:room-runtime:${Versions.room}"
+    kapt "androidx.room:room-compiler:${Versions.room}"
+
+    testImplementation "junit:junit:${Versions.junit}"
+    testImplementation "io.mockk:mockk:${Versions.mockk}"
+    testImplementation "androidx.arch.core:core-testing:${Versions.archCoreTesting}"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinxCoroutinesTest}"
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach{
+    kotlinOptions{
+        freeCompilerArgs +=["-Xjvm-default=all",]
+    }
+}

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Strider</string>
+    <!--Commons-->
+    <string name="loading_text">Loading...</string>
+    <string name="retry">Try again</string>
+    <string name="loading_progress_subtitle">Wait a minute</string>
+    <string name="loading_progress_title">Loading Posts</string>
+    <!-- Home -->
+    <string name="posterr">Posterr</string>
+    <string name="posts_empty">After you add your post will shown here</string>
+    <!-- Save Post -->
+    <string name="new_posterr">New Post</string>
+    <string name="poster_label">Type here your new post</string>
+    <string name="poster_label_field_error">Invalid post</string>
+    <string name="save_posterr">Save Post</string>
+    <string name="missing_character">%s Missing Characters</string>
+    <!--User-->
+    <string name="user">User</string>
+</resources>

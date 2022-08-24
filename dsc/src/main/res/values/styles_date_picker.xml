@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DscTheme.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="shapeAppearanceMediumComponent">@style/DscTheme.DatePicker.ShapeAppearance</item>
+    </style>
+
+    <style name="DscTheme.DatePicker.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">@dimen/radius_lg</item>
+    </style>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item android:state_checked="true">
+        <ripple android:color="?attr/colorControlHighlight" tools:targetApi="lollipop">
+            <item android:id="@android:id/mask">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/radius_xxlg" />
+                    <solid android:color="@color/primary200" />
+                    <padding
+                        android:bottom="@dimen/size_sm"
+                        android:left="@dimen/size_sm"
+                        android:right="@dimen/size_sm"
+                        android:top="@dimen/size_sm"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/radius_xxlg" />
+                    <solid android:color="@color/support100" />
+                    <padding
+                        android:bottom="@dimen/size_sm"
+                        android:left="@dimen/size_sm"
+                        android:right="@dimen/size_sm"
+                        android:top="@dimen/size_sm"/>
+                    <stroke android:width="@dimen/line_lg" android:color="?attr/colorPrimaryVariant" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/radius_xxlg" />
+            <solid android:color="@color/support100" />
+            <padding
+                android:bottom="@dimen/size_sm"
+                android:left="@dimen/size_sm"
+                android:right="@dimen/size_sm"
+                android:top="@dimen/size_sm"/>
+            <stroke android:width="@dimen/line_lg" android:color="@color/support300" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,39 @@
+ext.Versions = [
+        kotlinStdLib         : "1.6.10",
+        // Android Support X
+        coreKtx              : "1.7.0",
+        appCompat            : "1.5.0",
+        material             : "1.6.1",
+
+        // Arch Components
+        archComponents       : "2.2.0",
+
+        // Dagger2
+        dagger               : "2.40.5",
+
+        // Navigation
+        navigation           : "2.4.1",
+
+        // Compose
+        compose              : "1.1.1",
+        composeActivity      : "1.4.0",
+        composeUiTest        : "1.0.5",
+
+        //Room
+        room                 : "2.2.6",
+
+        // Utils
+        lottie               : "3.4.0",
+        lottieCompose        : "4.1.0",
+
+        // Tests
+        junit                : "4.13.2",
+        mockk                : "1.12.0",
+        archCoreTesting      : "2.1.0",
+        kotlinxCoroutinesTest: "1.5.0",
+]
+
+ext.Modules = [
+        commons: ":commons",
+        dsc    : ":dsc"
+]
