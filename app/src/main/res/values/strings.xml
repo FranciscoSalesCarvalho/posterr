@@ -8,7 +8,5 @@
     <!-- Home -->
     <string name="posterr">Github Repositories</string>
     <string name="name_repo_label">Name:</string>
-    <string name="author_repo_label">Author Name:</string>
-    <string name="start_repo_label">Stars:</string>
-    <string name="fork_repo_label">Forks:</string>
+    <string name="date_repo_label">Date:</string>
 </resources>

@@ -9,8 +9,10 @@ import com.francisco.strider.commons.extensions.setStatusBarColor
 import com.francisco.strider.commons.navigation.compose.setNavigationContent
 import com.francisco.strider.commons.view.BaseComposeActivity
 import com.francisco.strider.dsc.R
+import com.francisco.strider.feature.details.DetailsScreen
 import com.francisco.strider.feature.home.HomeScreen
 import com.francisco.strider.feature.main.MainViewModel.Navigation
+import com.francisco.strider.feature.success.SuccessScreen
 
 class MainActivity : BaseComposeActivity<MainViewModel>() {
 
@@ -30,6 +32,12 @@ class MainActivity : BaseComposeActivity<MainViewModel>() {
     private fun navGraphBuilder(builder: NavGraphBuilder) = builder.apply {
         composable(Navigation.HomeScreen.route) {
             HomeScreen(composeViewModel(), flowViewModel)
+        }
+        composable(Navigation.DetailsScreen.route) {
+            DetailsScreen(composeViewModel(), flowViewModel)
+        }
+        composable(Navigation.SuccessScreen.route) {
+            SuccessScreen(composeViewModel(), flowViewModel)
         }
     }
 

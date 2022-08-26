@@ -1,6 +1,7 @@
 package com.francisco.strider.feature.home
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -8,21 +9,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.paging.LoadState
-import androidx.paging.PagingData
-import androidx.paging.compose.LazyPagingItems
-import androidx.paging.compose.collectAsLazyPagingItems
-import androidx.paging.compose.items
 import com.francisco.strider.R
+import com.francisco.strider.commons.extensions.formatDateAsDayMonthYear
 import com.francisco.strider.domain.models.Post
 import com.francisco.strider.dsc.compose.component.AvatarImage
 import com.francisco.strider.dsc.compose.component.Header
@@ -39,12 +36,11 @@ import com.francisco.strider.dsc.compose.theme.font.body1Bold
 import com.francisco.strider.dsc.extensions.EMPTY_STRING
 import com.francisco.strider.feature.commons.ScreenError
 import com.francisco.strider.feature.commons.ScreenProgress
+import com.francisco.strider.feature.home.HomeViewModel.HomeScreenUiState
 import com.francisco.strider.feature.home.HomeViewModel.ScreenEvent
 import com.francisco.strider.feature.main.MainActivity
 import com.francisco.strider.feature.main.MainViewModel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.flowOf
+import java.util.Date
 
 @Composable
 fun HomeScreen(
@@ -67,7 +63,8 @@ fun HomeScreen(
     Screen(
         uiState = viewModel.uiState,
         onGoBackClicked = viewModel::onGoBackClicked,
-        onRetryClicked = viewModel::setup
+        onRetryClicked = viewModel::setup,
+        onItemClicked = viewModel::onItemClicked
     )
 }
 
@@ -81,6 +78,7 @@ private fun EventConsumer(
         viewModel.eventsFlow.collect { event ->
             when (event) {
                 ScreenEvent.GoBack -> activity.onBackPressed()
+                is ScreenEvent.PostSelected -> flowViewModel.itemSelectedId = event.id
                 is ScreenEvent.NavigateTo -> flowViewModel.navigate(event.navigation)
             }
         }
@@ -89,25 +87,29 @@ private fun EventConsumer(
 
 @Composable
 private fun Screen(
-    uiState: MutableStateFlow<Flow<PagingData<Post>>>,
+    uiState: HomeScreenUiState,
     onGoBackClicked: () -> Unit,
     onRetryClicked: () -> Unit,
+    onItemClicked: (id: String) -> Unit
 ) {
-    val uiPagingState by uiState.collectAsState()
-    when (val result = uiPagingState.collectAsLazyPagingItems().loadState.refresh) {
-        LoadState.Loading -> ScreenProgress()
-        is LoadState.Error -> ScreenError(
+    when (val result = uiState.screenState.collectAsState().value) {
+        HomeViewModel.ScreenState.Loading -> ScreenProgress()
+        is HomeViewModel.ScreenState.Failure -> ScreenError(
             error = result.error,
             onRetryClicked = onRetryClicked,
             onErrorCloseClicked = onGoBackClicked
         )
-        is LoadState.NotLoading -> ScreenContent(posts = uiPagingState)
+        is HomeViewModel.ScreenState.Success -> ScreenContent(
+            events = result.events,
+            onItemClicked = onItemClicked
+        )
     }
 }
 
 @Composable
 private fun ScreenContent(
-    posts: Flow<PagingData<Post>>
+    events: List<Post>,
+    onItemClicked: (id: String) -> Unit
 ) = DscTheme {
     Column(
         modifier = Modifier
@@ -115,7 +117,7 @@ private fun ScreenContent(
             .background(ColorPalette.Support100),
     ) {
         PageHeader()
-        PostList(posts = posts)
+        PostList(events = events, onItemClicked = onItemClicked)
     }
 }
 
@@ -127,47 +129,43 @@ private fun PageHeader() {
 }
 
 @Composable
-private fun PostList(posts: Flow<PagingData<Post>>) {
-    val lazyPosts: LazyPagingItems<Post> = posts.collectAsLazyPagingItems()
+private fun PostList(events: List<Post>, onItemClicked: (id: String) -> Unit) {
     LazyColumn {
-        items(items = lazyPosts) { post ->
-            post?.let {
-                PostItem(post = it)
-                SpacerVertical(dp = Size.SizeSM)
-            }
+        items(items = events) {
+            PostItem(post = it, onItemClicked = onItemClicked)
+            SpacerVertical(dp = Size.SizeSM)
         }
     }
 }
 
 @Composable
-private fun PostItem(post: Post) {
+private fun PostItem(
+    post: Post,
+    onItemClicked: (id: String) -> Unit
+) {
     Row(
-        modifier = Modifier.padding(all = Size.Size2XSM),
+        modifier = Modifier
+            .padding(all = Size.Size2XSM)
+            .clickable {
+                onItemClicked(post.id)
+            },
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
         AvatarImage(
             modifier = Modifier.size(Size.Size5XLG),
-            imageUrl = post.imageUrl,
+            imageUrl = post.image,
             initials = EMPTY_STRING
         )
         SpacerHorizontal()
         Column {
             RepositoryInfo(
                 label = stringResource(id = R.string.name_repo_label),
-                value = post.name,
+                value = post.title,
             )
             RepositoryInfo(
-                label = stringResource(id = R.string.author_repo_label),
-                value = post.authorName,
-            )
-            RepositoryInfo(
-                label = stringResource(id = R.string.start_repo_label),
-                value = post.starQuantity.toString(),
-            )
-            RepositoryInfo(
-                label = stringResource(id = R.string.fork_repo_label),
-                value = post.forkQuantity.toString(),
+                label = stringResource(id = R.string.date_repo_label),
+                value = Date(post.date).formatDateAsDayMonthYear(),
             )
         }
     }
@@ -196,7 +194,9 @@ private fun RepositoryInfo(
 @Composable
 private fun ScreenPreview() {
     Screen(
-        uiState = MutableStateFlow(value = flowOf()),
-        onGoBackClicked = {}
-    ) {}
+        uiState = HomeScreenUiState(),
+        onGoBackClicked = {},
+        onRetryClicked = {},
+        onItemClicked = {}
+    )
 }

@@ -1,12 +1,11 @@
-package com.francisco.strider.feature.home
+package com.francisco.strider.feature.details
 
 import com.francisco.strider.CoroutinesTestRule
 import com.francisco.strider.commons.error.Error
 import com.francisco.strider.commons.extensions.Result
 import com.francisco.strider.domain.models.Post
-import com.francisco.strider.domain.usecase.GetPostsUseCase
-import com.francisco.strider.feature.home.HomeViewModel.ScreenEvent
-import com.francisco.strider.feature.main.MainViewModel
+import com.francisco.strider.domain.usecase.CheckInUseCase
+import com.francisco.strider.domain.usecase.GetPostUseCase
 import io.mockk.coEvery
 import io.mockk.mockk
 import io.mockk.verify
@@ -21,23 +20,24 @@ import org.junit.Rule
 import org.junit.Test
 
 @ExperimentalCoroutinesApi
-class HomeViewModelTest {
+class DetailsViewModelTest {
 
     @get:Rule
     val coroutinesTestRule = CoroutinesTestRule()
 
     private val testCoroutineScope = TestCoroutineScope(Job())
 
-    private val useCase: GetPostsUseCase = mockk(relaxed = true)
+    private val useCase: GetPostUseCase = mockk(relaxed = true)
+    private val checkInUseCase: CheckInUseCase = mockk(relaxed = true)
 
-    private val observeEventMock: (ScreenEvent) -> (Unit) = mockk(relaxed = true)
-    private val screenState: (HomeViewModel.ScreenState) -> Unit = mockk(relaxed = true)
+    private val observeEventMock: (DetailsViewModel.ScreenEvent) -> (Unit) = mockk(relaxed = true)
+    private val screenState: (DetailsViewModel.ScreenState) -> Unit = mockk(relaxed = true)
 
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: DetailsViewModel
 
     @Before
     fun setup() {
-        viewModel = HomeViewModel(useCase = useCase)
+        viewModel = DetailsViewModel(useCase = useCase, checkInUseCase = checkInUseCase)
         prepareEventObserver()
     }
 
@@ -47,36 +47,21 @@ class HomeViewModelTest {
         viewModel.onGoBackClicked()
 
         // then
-        verify { observeEventMock(ScreenEvent.GoBack) }
-    }
-
-    @Test
-    fun `when clicked onItemClicked then dispatch event Navigate`() {
-        // given
-        val id = "1"
-
-        // when
-        viewModel.onItemClicked(id = id)
-
-        // then
-        verifyOrder {
-            observeEventMock(ScreenEvent.PostSelected(id = id))
-            observeEventMock(ScreenEvent.NavigateTo(navigation = MainViewModel.Navigation.DetailsScreen))
-        }
+        verify { observeEventMock(DetailsViewModel.ScreenEvent.GoBack) }
     }
 
     @Test
     fun `when clicked onResultLauncherResult should fetch posts successful`() = runBlocking {
-        val posts = listOf(Post.mock())
+        val posts = Post.mock()
         coEvery {
-            useCase.execute()
+            useCase.execute(id = ID)
         } returns Result.Success(data = posts)
 
-        viewModel.setup()
+        viewModel.setup(id = ID)
 
         verifyOrder {
-            screenState(HomeViewModel.ScreenState.Loading)
-            screenState(HomeViewModel.ScreenState.Success(events = posts))
+            screenState(DetailsViewModel.ScreenState.Loading)
+            screenState(DetailsViewModel.ScreenState.Success(event = posts))
         }
     }
 
@@ -84,20 +69,24 @@ class HomeViewModelTest {
     fun `when clicked onResultLauncherResult should fetch posts failure`() = runBlocking {
         val error: Error = mockk(relaxed = true)
         coEvery {
-            useCase.execute()
+            useCase.execute(id = ID)
         } returns Result.Failure(error = error)
 
-        viewModel.setup()
+        viewModel.setup(id = ID)
 
         verifyOrder {
-            screenState(HomeViewModel.ScreenState.Loading)
-            screenState(HomeViewModel.ScreenState.Failure(error = error))
+            screenState(DetailsViewModel.ScreenState.Loading)
+            screenState(DetailsViewModel.ScreenState.Failure(error = error))
         }
     }
 
     private fun prepareEventObserver() = testCoroutineScope.run {
         launch { viewModel.eventsFlow.collect { observeEventMock(it) } }
         launch { viewModel.uiState.screenState.collect { screenState(it) } }
+    }
+
+    companion object {
+        const val ID = "1"
     }
 
 }

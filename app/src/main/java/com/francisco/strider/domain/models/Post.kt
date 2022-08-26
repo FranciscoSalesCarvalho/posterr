@@ -1,21 +1,19 @@
 package com.francisco.strider.domain.models
 
-import com.francisco.strider.dsc.extensions.EMPTY_STRING
-
 data class Post(
-    val name: String,
-    val starQuantity: Long,
-    val forkQuantity: Long,
-    val imageUrl: String,
-    val authorName: String
+    val id: String,
+    val image: String,
+    val title: String,
+    val date: Long,
+    val description: String,
 ) {
     companion object {
         fun mock() = Post(
-            name = "kotlin",
-            authorName = "JetBrains",
-            starQuantity = 1,
-            forkQuantity = 1,
-            imageUrl = EMPTY_STRING
+            id = "1",
+            image = "https://",
+            title = "title",
+            date = 0,
+            description = "description"
         )
     }
 }

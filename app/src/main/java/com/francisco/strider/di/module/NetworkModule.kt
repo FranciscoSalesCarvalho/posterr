@@ -1,7 +1,7 @@
 package com.francisco.strider.di.module
 
 import com.francisco.strider.BuildConfig
-import com.francisco.strider.data.api.GithubRepositoryApi
+import com.francisco.strider.data.api.EventApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -18,8 +18,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiInterface(retrofit: Retrofit): GithubRepositoryApi =
-        retrofit.create(GithubRepositoryApi::class.java)
+    fun provideApiInterface(retrofit: Retrofit): EventApi =
+        retrofit.create(EventApi::class.java)
 
     @Provides
     @Singleton

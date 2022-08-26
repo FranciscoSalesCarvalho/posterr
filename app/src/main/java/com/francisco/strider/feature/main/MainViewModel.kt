@@ -10,6 +10,8 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor() : ViewModel(),
     EventSender<MainViewModel.Navigation> by ChannelEventSenderImpl() {
 
+    var itemSelectedId: String = ""
+
     fun navigate(navigation: Navigation) {
         viewModelScope.sendEvent(navigation)
     }
@@ -19,5 +21,7 @@ class MainViewModel @Inject constructor() : ViewModel(),
         val popStack: Boolean = false
     ) {
         object HomeScreen : Navigation("home_screen")
+        object DetailsScreen : Navigation("details_screen")
+        object SuccessScreen : Navigation("success_screen")
     }
 }
