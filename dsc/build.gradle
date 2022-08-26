@@ -51,7 +51,10 @@ dependencies {
     api "androidx.compose.ui:ui-tooling:${Versions.compose}"
     api "androidx.compose.material:material:${Versions.compose}"
     api "androidx.activity:activity-compose:${Versions.composeActivity}"
+    api "androidx.paging:paging-compose:1.0.0-alpha16"
 
+    implementation "io.coil-kt:coil-compose:${Versions.coil}"
+    implementation "io.coil-kt:coil:${Versions.coil}"
     implementation "com.airbnb.android:lottie:${Versions.lottie}"
     implementation "com.airbnb.android:lottie-compose:${Versions.lottieCompose}"
 }

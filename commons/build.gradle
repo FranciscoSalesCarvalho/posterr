@@ -62,15 +62,11 @@ dependencies {
     api "androidx.navigation:navigation-compose:${Versions.navigation}"
 
     // Dagger2
-    api "com.google.dagger:dagger:${Versions.dagger}"
-    api "com.google.dagger:dagger-android:${Versions.dagger}"
-    api "com.google.dagger:dagger-android-support:${Versions.dagger}"
-
-    annotationProcessor "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    kapt "com.google.dagger:dagger-compiler:${Versions.dagger}"
-
-    annotationProcessor "com.google.dagger:dagger-android-processor:${Versions.dagger}"
-    kapt "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    api AndroidLibs.dagger
+    api AndroidLibs.daggerAndroid
+    api AndroidLibs.daggerSupport
+    kapt AndroidLibs.daggerCompiler
+    kapt AndroidLibs.daggerProcessor
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach{

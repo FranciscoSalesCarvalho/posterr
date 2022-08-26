@@ -1,4 +1,4 @@
-package com.francisco.strider.feature.home
+package com.francisco.strider
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

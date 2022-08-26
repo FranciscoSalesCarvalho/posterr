@@ -1,20 +1,29 @@
 package com.francisco.strider.feature.home
 
-import com.francisco.strider.commons.error.Error
-import com.francisco.strider.commons.extensions.Result
-import com.francisco.strider.data.entities.Post
-import com.francisco.strider.domain.usecase.GetPostUseCase
+import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.viewModelScope
+import androidx.paging.LoadState
+import androidx.paging.LoadStates
+import androidx.paging.PagingData
+import com.francisco.strider.CoroutinesTestRule
+import com.francisco.strider.domain.models.Post
+import com.francisco.strider.domain.repository.GithubRepository
 import com.francisco.strider.feature.home.HomeViewModel.ScreenEvent
-import com.francisco.strider.feature.home.HomeViewModel.ScreenState
-import com.francisco.strider.feature.main.MainViewModel.Navigation.PosterScreen
 import io.mockk.coEvery
 import io.mockk.mockk
 import io.mockk.verify
 import io.mockk.verifyOrder
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineScope
+import kotlinx.coroutines.test.runBlockingTest
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -27,16 +36,16 @@ class HomeViewModelTest {
 
     private val testCoroutineScope = TestCoroutineScope(Job())
 
-    private val getPostUseCase: GetPostUseCase = mockk(relaxed = true)
+    private val repository: GithubRepository = mockk(relaxed = true)
 
     private val observeEventMock: (ScreenEvent) -> (Unit) = mockk(relaxed = true)
-    private val screenState: (ScreenState) -> Unit = mockk(relaxed = true)
+    private val screenState: (Flow<PagingData<Post>>) -> Unit = mockk(relaxed = true)
 
     private lateinit var viewModel: HomeViewModel
 
     @Before
     fun setup() {
-        viewModel = HomeViewModel(getPostUseCase = getPostUseCase)
+        viewModel = HomeViewModel(repository = repository)
         prepareEventObserver()
     }
 
@@ -50,47 +59,20 @@ class HomeViewModelTest {
     }
 
     @Test
-    fun `when clicked onNewPostClicked then dispatch event Navigation to Poster`() {
-        // when
-        viewModel.onNewPostClicked()
-
-        // then
-        verify { observeEventMock(ScreenEvent.NavigateTo(PosterScreen)) }
-    }
-
-    @Test
-    fun `when clicked onResultLauncherResult should fetch posts successful`() {
+    fun `when clicked onResultLauncherResult should fetch posts successful`() = runBlocking {
         val posts = listOf(Post.mock())
+        val paging = PagingData.from(posts)
+        val flow = flowOf(paging)
         coEvery {
-            getPostUseCase.execute()
-        } returns Result.Success(posts)
+            repository.getRepositories()
+        } returns flow
 
         viewModel.setup()
-
-        verifyOrder {
-            screenState(ScreenState.Loading)
-            screenState(ScreenState.Success(posts = posts))
-        }
-    }
-
-    @Test
-    fun `when clicked onResultLauncherResult should fetch posts failure`() {
-        val error: Error = mockk(relaxed = true)
-        coEvery {
-            getPostUseCase.execute()
-        } returns Result.Failure(error = error)
-
-        viewModel.setup()
-
-        verifyOrder {
-            screenState(ScreenState.Loading)
-            screenState(ScreenState.Failure(error = error))
-        }
     }
 
     private fun prepareEventObserver() = testCoroutineScope.run {
         launch { viewModel.eventsFlow.collect { observeEventMock(it) } }
-        launch { viewModel.uiState.screenState.collect { screenState(it) } }
+        launch { viewModel.uiState.collect { screenState(it) } }
     }
 
 }

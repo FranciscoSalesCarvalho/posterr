@@ -19,7 +19,5 @@ class MainViewModel @Inject constructor() : ViewModel(),
         val popStack: Boolean = false
     ) {
         object HomeScreen : Navigation("home_screen")
-        object PosterScreen : Navigation("poster_screen")
-        object UserScreen : Navigation("user_screen")
     }
 }

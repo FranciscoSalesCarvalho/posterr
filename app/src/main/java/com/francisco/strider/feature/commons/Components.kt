@@ -41,13 +41,13 @@ internal fun FragmentActivity.showScreenErrorDialog(
 
 @Composable
 internal fun ScreenError(
-    error: Error,
+    error: Throwable,
     onRetryClicked: () -> Unit,
     onErrorCloseClicked: () -> Unit
 ) {
     PosterrErrorDialog(
-        title = error.title,
-        message = error.message,
+        title = error.message ?: "",
+        message = EMPTY_STRING,
         bottomButtonText = stringResource(id = R.string.retry),
         onBottomButtonClick = onRetryClicked,
         onCloseClick = onErrorCloseClicked

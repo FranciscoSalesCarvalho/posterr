@@ -11,8 +11,6 @@ import com.francisco.strider.commons.view.BaseComposeActivity
 import com.francisco.strider.dsc.R
 import com.francisco.strider.feature.home.HomeScreen
 import com.francisco.strider.feature.main.MainViewModel.Navigation
-import com.francisco.strider.feature.poster.PostersScreen
-import com.francisco.strider.feature.user.UserScreen
 
 class MainActivity : BaseComposeActivity<MainViewModel>() {
 
@@ -32,12 +30,6 @@ class MainActivity : BaseComposeActivity<MainViewModel>() {
     private fun navGraphBuilder(builder: NavGraphBuilder) = builder.apply {
         composable(Navigation.HomeScreen.route) {
             HomeScreen(composeViewModel(), flowViewModel)
-        }
-        composable(Navigation.PosterScreen.route) {
-            PostersScreen(composeViewModel(), flowViewModel)
-        }
-        composable(Navigation.UserScreen.route) {
-            UserScreen(composeViewModel(), flowViewModel)
         }
     }
 
