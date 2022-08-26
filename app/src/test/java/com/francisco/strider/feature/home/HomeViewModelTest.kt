@@ -68,6 +68,10 @@ class HomeViewModelTest {
         } returns flow
 
         viewModel.setup()
+
+        verify(exactly = 1) {
+            repository.getRepositories()
+        }
     }
 
     private fun prepareEventObserver() = testCoroutineScope.run {
