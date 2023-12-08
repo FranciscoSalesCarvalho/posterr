@@ -5,8 +5,10 @@ import androidx.lifecycle.viewModelScope
 import com.francisco.strider.commons.viewModel.ChannelEventSenderImpl
 import com.francisco.strider.commons.viewModel.EventSender
 import com.francisco.strider.dsc.extensions.EMPTY_STRING
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class MainViewModel @Inject constructor() : ViewModel(),
     EventSender<MainViewModel.Navigation> by ChannelEventSenderImpl() {
 
@@ -18,6 +20,6 @@ class MainViewModel @Inject constructor() : ViewModel(),
         val route: String = EMPTY_STRING,
         val popStack: Boolean = false
     ) {
-        object HomeScreen : Navigation("home_screen")
+        data object HomeScreen : Navigation("home_screen")
     }
 }

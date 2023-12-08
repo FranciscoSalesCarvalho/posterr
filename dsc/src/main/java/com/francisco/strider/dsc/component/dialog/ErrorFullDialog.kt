@@ -62,7 +62,7 @@ class ErrorFullDialog : BaseDialogFragment() {
     }
 
     private fun setupIcon() = rootView?.findViewById<IconTextView>(R.id.itv_icon)?.run {
-        text = if (args.icon.isEmpty()) context.getString(R.string.icon_tired_kit) else args.icon
+        text = args.icon.ifEmpty { context.getString(R.string.icon_tired_kit) }
     }
 
     private fun setupTitle() = rootView?.findViewById<TextView>(R.id.tv_error_title)?.run {

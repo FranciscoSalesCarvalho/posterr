@@ -1,20 +1,23 @@
 package com.francisco.strider.feature.main
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.francisco.strider.commons.extensions.composeNavigate
 import com.francisco.strider.commons.extensions.setStatusBarColor
 import com.francisco.strider.commons.navigation.compose.setNavigationContent
-import com.francisco.strider.commons.view.BaseComposeActivity
 import com.francisco.strider.dsc.R
 import com.francisco.strider.feature.home.HomeScreen
 import com.francisco.strider.feature.main.MainViewModel.Navigation
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : BaseComposeActivity<MainViewModel>() {
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
 
-    override fun viewModelClass(): Class<MainViewModel> = MainViewModel::class.java
+    private val flowViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +32,7 @@ class MainActivity : BaseComposeActivity<MainViewModel>() {
 
     private fun navGraphBuilder(builder: NavGraphBuilder) = builder.apply {
         composable(Navigation.HomeScreen.route) {
-            HomeScreen(composeViewModel(), flowViewModel)
+            HomeScreen(flowViewModel)
         }
     }
 
